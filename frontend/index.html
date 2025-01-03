@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>attendence system</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="loginbox">
+        <div id="loginbox1" class="box1">
+            <h2>login </h2>
+            <input type="text" id="loginusername" placeholder="Username" />
+            <input type="text" id="password" placeholder="password" />
+            <button onclick="login()">login</button> 
+            <p>
+                Don't have an account? <a href="#" onclick="showRegister()">Create one</a><br>
+                <a href="#" onclick="showForgot()">Forgot Password?</a>
+            </p>   
+        </div>
+        <div id="registerBox" class="boxreg hidden">
+            <h2>Register</h2>
+            <input type="text" id="name" placeholder="Full Name" />
+            <input type="text" id="username" placeholder="Username" />
+            <input type="email" id="email" placeholder="Email Address" />
+            <input type="text" id="idNumber" placeholder="Your ID Number" />
+            <input type="text" id="phone" placeholder="Phone Number" />
+            <input type="password" id="password" placeholder="Create Password" />
+            <input type="password" id="confirmPassword" placeholder="Confirm Password" />
+            <button onclick="register()">Register</button>
+            <p style="color:red" id="error"></p>
+            <p>Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+        </div>
+         <div id="forgetbox" class="box2 hidden" >
+            <h2>Forget password</h2>
+            <input type="text" id="forgetname" placeholder="Full name">
+            <input type="text" id="forgetphone" placeholder="Phone number">
+            <input type="text" id="forgetnumber" placeholder="ID card number">
+            <button onclick="resetpassword()">Reset Password</button>
+            <p id="forgotError" style="color:red"></p>
+            <p>Back to <a href="#" onclick="showLogin()">Login</a></p>
+         </div>   
+    
+    </div>
+
+    <script  src="script.js"></script>
+</body>
+</html>
